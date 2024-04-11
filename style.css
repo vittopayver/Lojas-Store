@@ -18,15 +18,6 @@
      text-align-last: center;
 }
 
-     .img1 {
-     background-image: url('img1.png');
-     width: 420px;
-     height: 420px;
-     justify-content: center;
-     position: center;
-     align-items: center;
-     }
-
      .img2 {
      margin-top: 100px;
      width: 200px;
