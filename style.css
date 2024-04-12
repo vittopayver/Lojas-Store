@@ -11,7 +11,8 @@
      }
      
 
-     .container {    
+     .container {  
+     margin-top: 50px;   
      justify-content: center;
      position: center;
      align-items: center;
