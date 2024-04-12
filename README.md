@@ -8,5 +8,5 @@ meu alcance.
 Como entrar em contato comigo!?
 
 WhatsApp (99) 985444675 
-Redes Sociais No Geral:  @vittopayver 
+Redes Sociais: @vittopayver 
 www.lojas.store
