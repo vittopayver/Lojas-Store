@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Upload de Imagem</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-    #preview {
-        max-width: 300px;
-        max-height: 300px;
-        margin-bottom: 20px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload e Visualização de Imagem</title>
+    <style>
+        #imagePreview {
+            max-width: 300px;
+            max-height: 300px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Upload de Imagem</h1>
+    <h1>Upload e Visualização de Imagem</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <br>
+    <img id="imagePreview" src="#" alt="Imagem Preview">
+    <br>
+    <button onclick="copyImageLink()">Copiar Link da Imagem</button>
 
-<input type="file" id="uploadInput">
-<br>
-<img id="preview" src="#" alt="Imagem Preview">
-<br>
-<button onclick="copyImageLink()">Copiar Link</button>
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
 
-<script>
-    const uploadInput = document.getElementById('uploadInput');
-    const preview = document.getElementById('preview');
+        imageInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    localStorage.setItem('lastImage', e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
 
-    uploadInput.addEventListener('change', function() {
-        const file = uploadInput.files[0];
-        const reader = new FileReader();
-
-        reader.onload = function(e) {
-            preview.src = e.target.result;
+        function copyImageLink() {
+            const input = document.createElement('input');
+            input.setAttribute('value', localStorage.getItem('lastImage'));
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            alert('Link da imagem copiado para a área de transferência!');
         }
 
-        reader.readAsDataURL(file);
-    });
-
-    function copyImageLink() {
-        const link = document.createElement('input');
-        document.body.appendChild(link);
-        link.value = preview.src;
-        link.select();
-        document.execCommand('copy');
-        document.body.removeChild(link);
-        alert('Link da imagem copiado!');
-    }
-</script>
+        // Carrega a última imagem salva, se houver
+        window.onload = function() {
+            const lastImage = localStorage.getItem('lastImage');
+            if (lastImage) {
+                imagePreview.src = lastImage;
+            }
+        };
+    </script>
 </body>
 </html>
