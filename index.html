@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ECF0F3">
-
-<link rel="stylesheet" href="style.css">
-<title>Lojas Store</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar e Armazenar Imagem</title>
 </head>
-
-
-
-
 <body>
-  
-<div class="container">
-
-<div class="image"></div>
-
-<div class="linear">
- <h1 class="txt1">Lojas</h1>
- <h1 class="txt2">.Store</h1>
-</div> 
-
-<p class="txt3">Site em Criação.</p>
-
-
-</div>
-
+    <h1>Selecionar e Armazenar Imagem</h1>
+    
+    <!-- Input para selecionar uma imagem -->
+    <input type="file" accept="image/*" id="inputImage">
+    
+    <!-- Botão para armazenar a imagem e gerar o link -->
+    <button onclick="armazenarImagem()">Armazenar e Gerar Link</button>
+    
+    <!-- Div para mostrar o link gerado -->
+    <div id="linkContainer"></div>
+    
+    <script>
+        function armazenarImagem() {
+            const input = document.getElementById('inputImage');
+            const file = input.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.onload = function(event) {
+                    const imageData = event.target.result;
+                    
+                    // Armazenar a imagem internamente no navegador
+                    localStorage.setItem('imagem', imageData);
+                    
+                    // Gerar o link para a imagem
+                    const link = document.createElement('a');
+                    link.href = imageData;
+                    link.innerText = 'Link da Imagem';
+                    
+                    const linkContainer = document.getElementById('linkContainer');
+                    linkContainer.innerHTML = ''; // Limpar o conteúdo anterior
+                    linkContainer.appendChild(link);
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 </body>
 </html>
