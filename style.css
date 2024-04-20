@@ -2,10 +2,10 @@
 
 /* tema claro css */
 body { background: #ECF0F3; } 
-.image-div { background: #e9e9e9; }
-.image-div p { color: #1f1f1f; }
-#header { background: #fff; }
-#header_img { background: #000; }
+.image-div { background: #fff; }
+.image-div p { color: #fff; }
+#header { background: #000; }
+#header_img { background: #fff; }
 #header h3 { color: #2196F3; }
 #header p { color: #000; }
 
