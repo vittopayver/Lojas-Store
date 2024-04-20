@@ -1,11 +1,9 @@
 /* TEMA DARCK css */
 
 /* tema claro css */
-body { background: #ECF0F3; } 
-.image-div { background: #fff; }
-.image-div p { color: #fff; }
-#header { background: #000; }
-#header_img { background: #fff; }
+body { background: #ECF0F3; }
+#header { background: #fff; }
+#header img { background: #fff; }
 #header h3 { color: #2196F3; }
 #header p { color: #000; }
 
@@ -15,9 +13,7 @@ body { background: #ECF0F3; }
 
 /* tema escuro css */
 body { background: #ECF0F3; }
-.image-div { background: #fff; }
-.image-div p { color: #fff; }
-#header { background: #fff; }
-#header_img { background: #000; }
+#header { background: #000; }
+#header img { background: #000; }
 #header h3 { color: #2196F3; }
 #header p { color: #000; }
