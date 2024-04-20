@@ -1,0 +1,15 @@
+  #notification {
+    width: 290px;
+    position: fixed;
+    text-align: center; 
+    justify-content: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #05CF3B;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+  }

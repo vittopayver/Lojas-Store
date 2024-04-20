@@ -1,0 +1,23 @@
+/* TEMA DARCK css */
+
+/* tema claro css */
+body { background: #ECF0F3; } 
+.image-div { background: #e9e9e9; }
+.image-div p { color: #1f1f1f; }
+#header { background: #fff; }
+#header_img { background: #000; }
+#header h3 { color: #2196F3; }
+#header p { color: #000; }
+
+
+@media (prefers-color-scheme: dark) {
+
+
+/* tema escuro css */
+body { background: #ECF0F3; }
+.image-div { background: #282828; }
+.image-div p { color: #000; }
+#header { background: #fff; }
+#header_img { background: #000; }
+#header h3 { color: #2196F3; }
+#header p { color: #000; }
