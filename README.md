@@ -1,12 +1,3 @@
-👋 Olá, sou Vitto Payver. 
-Tenho interesse em criação de sistemas em Geral. 
-Atualmente estou estudando códigos de programação 
-Procuro colaborar como programador no que for do 
-meu alcance.
-
-
-Como entrar em contato comigo!?
-
-WhatsApp (99) 985444675 
-Redes Sociais: @vittopayver 
+👋 Olá, sou o Vitto Payver
+criador do site Lojas Store para Griff Cards aqui trabalhamos comvários tipos de Griff Cards em diversos setores.
 www.lojas.store
