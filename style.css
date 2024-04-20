@@ -15,8 +15,8 @@ body { background: #ECF0F3; }
 
 /* tema escuro css */
 body { background: #ECF0F3; }
-.image-div { background: #282828; }
-.image-div p { color: #000; }
+.image-div { background: #fff; }
+.image-div p { color: #fff; }
 #header { background: #fff; }
 #header_img { background: #000; }
 #header h3 { color: #2196F3; }
