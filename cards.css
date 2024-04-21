@@ -1,7 +1,10 @@
 .main {
     padding: 70px 0px 10px 0px;
 }
-
+#vitto {
+    width: 300px;
+    height: 30px;
+}
 .container{ 
 height: 100vh; width: 100vw;
 display: block; padding: 0px 0px 0px 0px;  left: 0%;  border-radius: 0px; text-align: center; color: black; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; 
