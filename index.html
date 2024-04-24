@@ -1,156 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color"
-content="#fff">
-
-<title>Lojas Store</title>
-
-
-<style>
-/* BODY css */
-html, body { height: 100vh; width: 100vw; padding: 0; margin: 0px; }
-body { justify-content: center; font-family: 'Poppins', sans-serif; }
-</style>
-<link rel="stylesheet" href="cards.css">
-<link rel="stylesheet" href="header.css">
-<link rel="stylesheet" href="popup.css">
-<link rel="stylesheet" href="notif.css">
-<link rel="stylesheet" href="style.css">
-
-<!---------------HEADER--------------->
-
-<header>
-<div id="header">
-<img src="1713807138086.png"><br>
-<div><h3>Lojas Store</h3><p>www.lojas.store</p></div>
-</div></br>
-</header> 
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Código</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
 <body>
+    <h1>Editor de Código</h1>
+    <h2>HTML:</h2>
+    <textarea id="htmlCode"></textarea>
 
+    <h2>CSS:</h2>
+    <textarea id="cssCode"></textarea>
 
-<!----------------CARD----------------->
+    <h2>JavaScript:</h2>
+    <textarea id="jsCode"></textarea>
 
-<div class="main">
-<div class="container">
- 
+    <button onclick="compile()">Compilar em APK</button>
 
-    
-    <div class="card">
-    
-    <img class="image" src="https://lojasstore.netlify.app/1713627598620.png" alt="Imagem do Produto">
-   <div class="box">
-    <p class="p1">100 Diamantes +10% de Bônus.</p>
-    <h1 class="h">PIX R$ 9,99</h1>
-    
+    <a id="downloadLink" style="display: none;"></a>
 
-    <button class="zap1" onclick="zap1()">Comprar</button></div></div>
+    <script>
+        function compile() {
+            var html = document.getElementById("htmlCode").value;
+            var css = document.getElementById("cssCode").value;
+            var js = document.getElementById("jsCode").value;
 
+            // Aqui você pode fazer o processo de compilação para APK
+            // Por exemplo, usando ferramentas como PhoneGap, Cordova, ou outra plataforma de desenvolvimento de aplicativos móveis.
 
-    
-    <div class="card">
-    
-    <img class="image" src="https://lojasstore.netlify.app/1713627644213.png" alt="Imagem do Produto">
-   <div class="box">
-    <p class="p1">310 Diamantes +10% de Bônus.</p>
-    <h1 class="h">PIX R$ 14,99</h1>
-    
+            // Simulando a criação de um arquivo APK
+            var apkContent = "APK CONTENT: HTML - " + html + ", CSS - " + css + ", JS - " + js;
+            var apkBlob = new Blob([apkContent], { type: 'text/plain' });
+            var apkUrl = URL.createObjectURL(apkBlob);
+            var apkFileName = "app.apk";
 
-    <button class="zap2" onclick="zap2()">Comprar</button></div></div>
-
-
-
-    <div class="card">
-    
-    <img class="image" src="https://lojasstore.netlify.app/1713627657916.png" alt="Imagem do Produto">
-   <div class="box">
-    <p class="p1">520 Diamantes +10% de Bônus.</p>
-    <h1 class="h">PIX R$ 24,99</h1>
-    
-
-    <button class="zap3" onclick="zap3()">Comprar</button></div></div>
-
-
-
-
-    <div class="card">
-    
-    <img class="image" src="https://lojasstore.netlify.app/1713627689689.png" alt="Imagem do Produto">
-   <div class="box">
-    <p class="p1">1060 Diamantes +10% de Bônus.</p>
-    <h1 class="h">PIX R$ 59,99</h1>
-    
-
-    <button class="zap4" onclick="zap4()">Comprar</button></div></div>
-
-
-
-
-    <div class="card">
-    
-    <img class="image" src="https://lojasstore.netlify.app/1713627675695.png" alt="Imagem do Produto">
-   <div class="box">
-    <p class="p1">2180 Diamantes +10% de Bônus.</p>
-    <h1 class="h">PIX R$ 94,99</h1>
-    
-
-    <button class="zap5" onclick="zap5()">Comprar</button></div></div>
- 
-
-
-
-
-    <div class="card">
-    
-    <img class="image" src="https://lojasstore.netlify.app/1713627712513.png" alt="Imagem do Produto">
-   <div class="box">
-    <p class="p1">5600 Diamantes +10% de Bônus.</p>
-    <h1 class="h">PIX R$ 114,99</h1>
-    
-
-    <button class="zap6" onclick="zap6()">Comprar</button></div></div>
-
-
-
-
- 
-</div>
- <div class="vitto"></div>
-</div>
-
-
-
-<!-------------NOTIFICACAO-------------->
-
-
-<div id="notification"></div>
-
-
-<!----------------POPUP----------------->
-
-<div class="popup" id="popup">
-  <div class="popup-content">
-      
-</span>
-    <h2>Atenção!</h2>
-    <p>Todas as compras são realizadas pelo WhatsApp! Temos uma equipe disponível  24hrs por dia. Ao clicar em comprar você será redirecionado para o WhatsApp. Por favor, confirme se você Entendue.</p>
-    <button onclick="closePopup()">Entendi</button></div></div>
-
-
-<script src="cards.js"></script> 
-<script src="popup.js"></script> 
-<script src="notif.js"></script>
-
-
-
-
-</body>    
+            // Criando o link de download do arquivo APK
+            var downloadLink = document.getElementById("downloadLink");
+            downloadLink.href = apkUrl;
+            downloadLink.download = apkFileName;
+            downloadLink.innerText = "Baixar APK";
+            downloadLink.style.display = "block";
+        }
+    </script>
+</body>
 </html>
